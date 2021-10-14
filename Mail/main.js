@@ -22,32 +22,27 @@ const checkEmail = document.getElementById('emailCheck')
 const checkBtn = document.getElementById('check')
 
 const registered = ['mario.rossi@example.it', 'pippo.inzaghi@example.it', 'mario.delillo@example.it', 'massimino@example.it']
-
-for (let e = 0; e < registered.length; e++) {
-  const element = registered[e];
-  console.log(element)
-  /* if (checkEmail == registered) {
-    let confirm = document.getElementById('allowed')
-
-    confirm = `<div class=""><h2>CONGRATULAZIONI HAI ACCESSO A QUESTO PORTALE!</h2></div>`
-  } else if (checkEmail != registered) {
-    let rejected = document.getElementById('rejected')
-
-    rejected = `<h2>EHY TU! NON FARE IL FURBO! NON SEI STATO INVITATO, ESCI <span>SUBITO</span></h2>`
-  } */
-}
+console.log(registered)
 
 checkBtn.addEventListener('click', function () {
-  if (checkEmail === registered) {
-    let confirm = document.getElementById('allowed')
+  for (let e = 0; e < registered.length; e++) {
+    const element = registered[e];
+    console.log(element)
 
-    confirm = `<h2 class="block">CONGRATULAZIONI HAI ACCESSO A QUESTO PORTALE!</h2></div>`
-    console.log(confirm)
-  } else if (checkEmail != element) {
-    let rejected = document.getElementById('rejected')
+    if (checkEmail === registered[e]) {
 
-    rejected = `<h2 class="block">EHY TU! NON FARE IL FURBO! NON SEI STATO INVITATO, ESCI <span>SUBITO</span></h2>`
-    console.log(rejected)
+      let confirm = checkEmail.value
 
+      confirm = `<h2>CONGRATULAZIONI HAI ACCESSO A QUESTO PORTALE!</h2>`
+
+      console.log(confirm)
+
+    } else if (checkEmail != registered) {
+      let rejected = checkEmail.value
+
+      rejected = `<h2>EHY TU! NON FARE IL FURBO! NON SEI STATO INVITATO, ESCI <span>SUBITO</span></h2>`
+
+      console.log(rejected)
+    }
   }
 })
