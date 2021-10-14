@@ -1,0 +1,58 @@
+body {
+  background-color: bisque;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  border: 5px dashed black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1, h2 {
+  text-align: center;
+  color: cornflowerblue;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+span {
+  color: crimson;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  height: 35px;
+}
+
+.form_group {
+    position: relative;
+    right: 5rem;
+    line-height: 35px;
+}
+
+button#check {
+    position: relative;
+    right: 3rem;
+    background-color: cornflowerblue;
+    border: 0;
+    border-radius: 6px;
+}
+
+button#check:hover {
+  background-color: rgb(70, 106, 173);
+  color: white;
+  cursor: pointer;
+}
