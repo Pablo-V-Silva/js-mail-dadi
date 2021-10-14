@@ -56,3 +56,7 @@ button#check:hover {
   color: white;
   cursor: pointer;
 }
+
+.confirm, .denied {
+  display: none;
+}
