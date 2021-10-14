@@ -1,0 +1,29 @@
+body {
+  background-color: black;
+}
+
+#winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: white;
+  border: 5px dashed white;
+  text-align: center;
+  padding: 1rem;
+}
+
+#throw {
+  position: absolute;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  padding: 0.5rem 0.8rem;
+  border: 2px solid white;
+  border-radius: 11px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 3rem;
+}
