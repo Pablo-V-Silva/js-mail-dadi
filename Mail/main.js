@@ -21,31 +21,50 @@ const emailCheck = document.getElementById('emailCheck')
 
 const checkBtn = document.getElementById('check')
 
-const showAllowed = document.getElementById('allowed')
-
-const showRejected = document.getElementById('rejected')
-
-const email = emailCheck.value
+const showAllowed = document.querySelector('#risposta')
 
 const registered = ['mario.rossi@example.it', 'pippo.inzaghi@example.it', 'mario.delillo@example.it', 'massimino@example.it']
-console.log(registered)
 
 checkBtn.addEventListener('click', function () {
+
+  const email = emailCheck.value
+  console.log(email);
+
+  let show = false
+
   for (let e = 0; e < registered.length; e++) {
     const element = registered[e];
-    console.log(element)
+    /* console.log(element) */
 
-    if (email === registered[e]) {
-      const check = `<h2 class="block">CONGRATULAZIONI! HAI AVUTO L'ACCESSO AL SITO!</h2>`
+    if (email == registered[e]) {
 
-      showAllowed.innerHTML += check
-    } else if (email != registered[e]) {
-      const wrong = `<h2 class="block">HEY! NON FARE IL FURBO, NON SEI REGISTRATO ESCI <span>SUBITO!</span></h2>`
+      show = true
 
-      showRejected.innerHTML += wrong
+      console.log('trovato');
+
     }
+  }
 
+  if (show == true) {
+    const allowed = `<div id="allowed" class="block">
+        <h2 class="">CONGRATULAZIONI! HAI AVUTO L'ACCESSO AL SITO!</h2>
+      </div>`
+
+    showAllowed.innerHTML = allowed
+
+    console.log(allowed);
+
+    console.log(showAllowed);
+  } else {
+
+    const rejected = `<div id="rejected" class="block">
+        <h2 class="">HEY! NON FARE IL FURBO, NON SEI REGISTRATO ESCI <span>SUBITO!</span></h2>
+      </div>`
+
+    showAllowed.innerHTML = rejected
 
 
   }
+
+  console.log(show);
 })

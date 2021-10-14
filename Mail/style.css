@@ -57,10 +57,7 @@ button#check:hover {
   cursor: pointer;
 }
 
-.confirm, .denied {
-  display: none;
-}
-
 .block {
   display: block;
+  text-align: center;
 }
