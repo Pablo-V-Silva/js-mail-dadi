@@ -62,9 +62,6 @@ checkBtn.addEventListener('click', function () {
       </div>`
 
     showAllowed.innerHTML = rejected
-
-
   }
-
   console.log(show);
 })
