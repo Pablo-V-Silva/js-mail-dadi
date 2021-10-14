@@ -13,18 +13,21 @@ inner.html
 
 const player = Math.floor(Math.random() * 7)
 const cpu = Math.floor(Math.random() * 7)
-console.log(player, cpu);
-const winner = document.getElementById('winner')
+const winner = document.getElementById('winner');
+const dice = document.getElementById('throw');
 
-if (player > cpu) {
-  const playerWin = `<h1>Il Player Ha vinto lo SQUID GAME con ${player}, battendo il computer che ha avuto ${cpu}</h1>`
-  winner.innerHTML = playerWin
+dice.addEventListener('click', function () {
+  if (player > cpu) {
+    const playerWin = `<h1>Il Player Ha vinto lo SQUID GAME con ${player}, battendo il computer che ha avuto ${cpu}</h1>`
+    winner.innerHTML = playerWin
 
-} else if (player == cpu) {
-  const both = `<h1>Il Player ha pareggiato con il computer con ${player} rispetto a ${cpu}</h1>`
-  winner.innerHTML = both
+  } else if (player == cpu) {
+    const both = `<h1>Il Player ha pareggiato con il computer con ${player} rispetto a ${cpu}</h1>`
+    winner.innerHTML = both
 
-} else {
-  const cpuWin = `<h1>La CPU ha battuto il player con ${cpu} rispetto a ${player}</h1>`
-  winner.innerHTML = cpuWin
-}
+  } else {
+    const cpuWin = `<h1>La CPU ha vinto lo SQUID GAME con ${cpu} rispetto a ${player}</h1>`
+    winner.innerHTML = cpuWin
+  }
+
+})
