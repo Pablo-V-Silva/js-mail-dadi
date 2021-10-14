@@ -17,9 +17,15 @@ if
 */
 
 // Istruzioni
-const checkEmail = document.getElementById('emailCheck')
+const emailCheck = document.getElementById('emailCheck')
 
 const checkBtn = document.getElementById('check')
+
+const showAllowed = document.getElementById('allowed')
+
+const showRejected = document.getElementById('rejected')
+
+const email = emailCheck.value
 
 const registered = ['mario.rossi@example.it', 'pippo.inzaghi@example.it', 'mario.delillo@example.it', 'massimino@example.it']
 console.log(registered)
@@ -29,20 +35,17 @@ checkBtn.addEventListener('click', function () {
     const element = registered[e];
     console.log(element)
 
-    if (checkEmail === registered[e]) {
+    if (email === registered[e]) {
+      const check = `<h2 class="block">CONGRATULAZIONI! HAI AVUTO L'ACCESSO AL SITO!</h2>`
 
-      let confirm = checkEmail.value
+      showAllowed.innerHTML += check
+    } else if (email != registered[e]) {
+      const wrong = `<h2 class="block">HEY! NON FARE IL FURBO, NON SEI REGISTRATO ESCI <span>SUBITO!</span></h2>`
 
-      confirm = `<h2>CONGRATULAZIONI HAI ACCESSO A QUESTO PORTALE!</h2>`
-
-      console.log(confirm)
-
-    } else if (checkEmail != registered) {
-      let rejected = checkEmail.value
-
-      rejected = `<h2>EHY TU! NON FARE IL FURBO! NON SEI STATO INVITATO, ESCI <span>SUBITO</span></h2>`
-
-      console.log(rejected)
+      showRejected.innerHTML += wrong
     }
+
+
+
   }
 })
