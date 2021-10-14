@@ -60,3 +60,7 @@ button#check:hover {
 .confirm, .denied {
   display: none;
 }
+
+.block {
+  display: block;
+}

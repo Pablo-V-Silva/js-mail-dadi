@@ -26,7 +26,7 @@ const registered = ['mario.rossi@example.it', 'pippo.inzaghi@example.it', 'mario
 for (let e = 0; e < registered.length; e++) {
   const element = registered[e];
 
-  if (checkEmail == registered) {
+  /* if (checkEmail == registered) {
     let confirm = document.getElementById('allowed')
 
     confirm = `<div class=""><h2>CONGRATULAZIONI HAI ACCESSO A QUESTO PORTALE!</h2></div>`
@@ -34,6 +34,18 @@ for (let e = 0; e < registered.length; e++) {
     let rejected = document.getElementById('rejected')
 
     rejected = `<h2>EHY TU! NON FARE IL FURBO! NON SEI STATO INVITATO, ESCI <span>SUBITO</span></h2>`
-  }
-
+  } */
 }
+
+checkBtn.addEventListener('click', function () {
+  if (checkEmail === registered) {
+    let confirm = document.getElementById('allowed')
+
+    confirm = `<h2 class="block">CONGRATULAZIONI HAI ACCESSO A QUESTO PORTALE!</h2></div>`
+    console.log
+  } else if (checkEmail != registered) {
+    let rejected = document.getElementById('rejected')
+
+    rejected = `<h2 class="block">EHY TU! NON FARE IL FURBO! NON SEI STATO INVITATO, ESCI <span>SUBITO</span></h2>`
+  }
+})
