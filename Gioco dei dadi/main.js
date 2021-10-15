@@ -16,8 +16,8 @@ const dice = document.getElementById('throw');
 
 dice.addEventListener('click', function () {
 
-  const player = Math.floor(Math.random() * 7)
-  const cpu = Math.floor(Math.random() * 7)
+  const player = Math.ceil(Math.random() * 6)
+  const cpu = Math.ceil(Math.random() * 6)
 
   if (player > cpu) {
     const playerWin = `<h1>Il Player Ha vinto lo SQUID GAME con ${player}, battendo il computer che ha avuto ${cpu}</h1>`
