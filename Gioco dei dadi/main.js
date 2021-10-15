@@ -11,12 +11,14 @@ Math.floor (Math.random() * 7)
 inner.html
 */
 
-const player = Math.floor(Math.random() * 7)
-const cpu = Math.floor(Math.random() * 7)
 const winner = document.getElementById('winner');
 const dice = document.getElementById('throw');
 
 dice.addEventListener('click', function () {
+
+  const player = Math.floor(Math.random() * 7)
+  const cpu = Math.floor(Math.random() * 7)
+
   if (player > cpu) {
     const playerWin = `<h1>Il Player Ha vinto lo SQUID GAME con ${player}, battendo il computer che ha avuto ${cpu}</h1>`
     winner.innerHTML = playerWin
